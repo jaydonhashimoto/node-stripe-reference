@@ -1,0 +1,17 @@
+{
+  "name": "stripeexample",
+  "version": "1.0.0",
+  "description": "EBook example using stripe",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server",
+    "dev": "nodemon server"
+  },
+  "author": "Jaydon Hashimoto",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4",
+    "express-handlebars": "^3.1.0",
+    "stripe": "^7.0.0"
+  }
+}
