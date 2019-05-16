@@ -31,6 +31,13 @@ app.post('/charge', (req, res) => {
     //create customer
     stripe.customers.create({
         email: req.body.stripeEmail,
+        name: req.body.stripeBillingName,
+        address: {
+            line1: req.body.stripeBillingAddressLine1,
+            city: req.body.stripeBillingAddressCity,
+            country: req.body.stripeBillingAddressCountry,
+            postal_code: req.body.stripeBillingAddressZip
+        },
         source: req.body.stripeToken
     })
         //charge customer
